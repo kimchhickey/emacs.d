@@ -1,6 +1,21 @@
 Emacs config -*- mode: org -*-
 
 * General Settings
+** Increase font size for better readability
+   #+BEGIN_SRC emacs-lisp
+   (set-face-attribute 'default nil :height 140)
+   #+END_SRC
+
+** Full path in title bar
+   #+BEGIN_SRC emacs-lisp
+   (setq frame-title-format "%b (%f)")
+   #+END_SRC
+
+** Save Place
+   #+BEGIN_SRC emacs-lisp
+   (save-place-mode 1)
+   #+END_SRC
+
 ** Don't show startup message
    #+BEGIN_SRC emacs-lisp
    (setq inhibit-startup-message t)
@@ -107,7 +122,10 @@ Emacs config -*- mode: org -*-
                                (bookmarks . 5)
                                (projects . 5)
                                (agenda . 5)
-                               (registers . 5))))
+                               (registers . 5)))
+       (setq dashboard-startup-banner 'logo)
+       (setq dashboard-banner-logo-title nil)
+       (setq dashboard-center-content t))
      :config
      (dashboard-setup-startup-hook))
    #+END_SRC
