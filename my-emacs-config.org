@@ -3,6 +3,12 @@ Emacs config -*- mode: org -*-
 * General Settings
 ** Increase font size for better readability
    #+BEGIN_SRC emacs-lisp
+   (defalias 'yes-or-no-p 'y-or-n-p)
+   #+END_SRC
+
+
+** Increase font size for better readability
+   #+BEGIN_SRC emacs-lisp
    (set-face-attribute 'default nil :height 140)
    #+END_SRC
 
@@ -82,6 +88,14 @@ Emacs config -*- mode: org -*-
    #+END_SRC
 
 * General Packages
+** Execute PATH from shell
+   #+BEGIN_SRC emacs-lisp
+   (use-package exec-path-from-shell
+     :ensure t
+     :config
+     (exec-path-from-shell-initialize))
+   #+END_SRC
+
 ** Which key
    #+BEGIN_SRC emacs-lisp
    (use-package which-key
