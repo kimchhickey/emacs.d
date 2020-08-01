@@ -6,7 +6,6 @@ Emacs config -*- mode: org -*-
    (defalias 'yes-or-no-p 'y-or-n-p)
    #+END_SRC
 
-
 ** Increase font size for better readability
    #+BEGIN_SRC emacs-lisp
    (set-face-attribute 'default nil :height 140)
@@ -121,11 +120,13 @@ Emacs config -*- mode: org -*-
      (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
      (projectile-global-mode))
    #+END_SRC
+
 ** Rainbow
    #+BEGIN_SRC emacs-lisp
    (use-package rainbow-mode
      :ensure t)
    #+END_SRC
+
 ** Dashboard
    #+BEGIN_SRC emacs-lisp
    (use-package dashboard
@@ -142,6 +143,13 @@ Emacs config -*- mode: org -*-
        (setq dashboard-center-content t))
      :config
      (dashboard-setup-startup-hook))
+   #+END_SRC
+
+** Magit
+   #+BEGIN_SRC emacs-lisp
+   (use-package magit
+     :ensure t
+     :bind (("C-x g" . magit-status)))
    #+END_SRC
 
 * Programming Packages
