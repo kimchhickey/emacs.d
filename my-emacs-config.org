@@ -1,6 +1,11 @@
 Emacs config -*- mode: org -*-
 
 * General Settings
+** Tab Size
+   #+BEGIN_SRC emacs-lisp
+   (setq-default tab-width 2)
+   #+END_SRC
+
 ** Increase font size for better readability
    #+BEGIN_SRC emacs-lisp
    (defalias 'yes-or-no-p 'y-or-n-p)
@@ -59,6 +64,11 @@ Emacs config -*- mode: org -*-
 ** Display line numbers when programming
    #+BEGIN_SRC emacs-lisp
    (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+   #+END_SRC
+
+** Backup Folders
+   #+BEGIN_SRC emacs-lisp
+   (setq backup-directory-alist '(("." . "~/.saves/")))
    #+END_SRC
 
 * UI
@@ -213,6 +223,12 @@ Emacs config -*- mode: org -*-
      (add-hook 'cider-repl-mode-hook #'cider-company-enable-fuzzy-completion)
      (add-hook 'cider-mode-hook #'cider-company-enable-fuzzy-completion))
    #+END_SRC
+
+** Haskell
+  #+BEGIN_SRC emacs-lisp
+  (use-package haskell-mode
+    :ensure t)
+  #+END_SRC
 
 ** Flycheck
    #+BEGIN_SRC emacs-lisp
