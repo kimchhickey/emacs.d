@@ -4,8 +4,8 @@ Emacs config -*- mode: org -*-
 ** Tab Size
    #+BEGIN_SRC emacs-lisp
    (setq-default tab-width 2)
-	 (setq js-indent-level 2)
-	 (setq-default indent-tabs-mode nil)
+   (setq js-indent-level 2)
+   (setq-default indent-tabs-mode nil)
    #+END_SRC
 
 ** Increase font size for better readability
