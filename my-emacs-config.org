@@ -71,6 +71,9 @@ Emacs config -*- mode: org -*-
 ** Backup Folders
    #+BEGIN_SRC emacs-lisp
    (setq make-backup-files nil)
+   (setq backup-directory-alist
+     `(("." . ,(concat user-emacs-directory "backups"))))
+
    #+END_SRC
 ** ETC
    #+BEGIN_SRC emacs-lisp
