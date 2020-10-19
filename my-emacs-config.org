@@ -15,7 +15,7 @@ Emacs config -*- mode: org -*-
 
 ** Increase font size for better readability
    #+BEGIN_SRC emacs-lisp
-   (set-face-attribute 'default nil :height 140)
+   (set-face-attribute 'default nil :font "Hasklug Nerd Font 14" )
    #+END_SRC
 
 ** Full path in title bar
@@ -104,6 +104,7 @@ Emacs config -*- mode: org -*-
      :ensure t
      :config
      (load-theme 'afternoon t))
+   (setq-default line-spacing 0.2)
    #+END_SRC
 
 * Modes
@@ -290,3 +291,9 @@ Emacs config -*- mode: org -*-
      (add-hook 'reason-mode-hook (lambda ()
        (add-hook 'before-save-hook #'refmt-before-save))))
    #+END_SRC
+** GraphQL
+   #+BEGIN_SRC emacs-lisp
+   (use-package graphql-mode
+     :ensure t)
+   #+END_SRC
+

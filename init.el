@@ -27,7 +27,7 @@
  '(gnus-use-full-window t)
  '(ns-use-fullscreen-animation t)
  '(package-selected-packages
-   '(neotree reason-mode haskell-mode company cider clojure-mode-extra-font-locking clojure-mode rainbow-delimiters paredit magit dashboard rainbow-mode projectile smex which-key exec-path-from-shell afternoon-theme use-package))
+   '(request graphql-mode neotree reason-mode haskell-mode company cider clojure-mode-extra-font-locking clojure-mode rainbow-delimiters paredit magit dashboard rainbow-mode projectile smex which-key exec-path-from-shell afternoon-theme use-package))
  '(user-full-name "Sungmin Yang"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
